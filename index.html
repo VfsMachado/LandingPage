@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho do Barna - William Barnabé</title>
+    <link rel="stylesheet" href="style.css"> <!-- Importando o CSS externo -->
+    <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+</head>
+<body>
+
+    <header class="fixed-header">
+        <img src="imagens/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#churrasco-gastronomia">Churrasco & Gastronomia</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="banner">
+        <img src="imagens/banner.png" alt="Banner do Cantinho do Barna">
+    </section>
+    <section class="hero">
+        <h1>Sabores Inesquecíveis, Experiências Memoráveis!</h1>
+        <p>Venha conhecer o melhor da gastronomia artesanal.</p>
+        <button class="btn" onclick="location.href='https://wa.me/seunumero'">Fale Conosco</button>
+        <button class="btn" onclick="location.href='https://www.instagram.com/cantinhodobarna/'">Instagram</button>
+    </section>
+
+    <div class="container">
+        <div class="card">
+            <h2>Sobre Nós</h2>
+            <p>O Cantinho do Barna é um espaço criado para proporcionar experiências únicas através da gastronomia.</p>
+        </div>
+        <div class="card">
+            <h2>Nosso Cardápio</h2>
+            <p>Conheça nossos melhores pratos, preparados com carinho e dedicação.</p>
+        </div>
+    </div>
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-conteudo">
+                <div class="sobre-imagem">
+                    <img src="imagens/william.jpg" alt="William Barnabé">
+                </div>
+                <div class="sobre-texto">
+                    <h2>Sobre Nós</h2>
+                    <p><strong>O Cantinho do Barna</strong> é mais do que um restaurante, é um espaço onde sabor, tradição e paixão pela gastronomia se encontram. Nosso compromisso é proporcionar uma experiência única, levando até você pratos preparados com ingredientes selecionados e um toque especial de carinho.</p>
+                    
+                    <p><strong>👨🏿‍🍳🔥 William Barnabé</strong> – Cozinheiro, gastrólogo e assador, é o nome por trás do Cantinho do Barna. Com anos de experiência no ramo gastronômico, ele se dedica a criar pratos que surpreendem pelo sabor e pela apresentação.</p>
+                    
+                    <p><strong>🏠 Eventos corporativos e privados</strong> – O Cantinho do Barna oferece serviços personalizados para empresas e celebrações particulares, garantindo um cardápio exclusivo e uma experiência gastronômica memorável.</p>
+                    
+                    <p><strong>❤️ Seu cantinho favorito</strong> – Mais do que um negócio, é um ambiente acolhedor, onde cada prato é preparado com dedicação para criar momentos inesquecíveis.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="churrasco-gastronomia" class="churrasco-gastronomia">
+        <div class="container-churrasco">
+          <h2>🔥 Churrasco & Gastronomia</h2>
+          <p>No <strong>Cantinho do Barna</strong>, a comida é mais do que refeição: é uma experiência feita com carinho, fogo e paixão.</p>
+          <p>Combinamos o sabor do churrasco tradicional com toques de criatividade e ingredientes de qualidade.</p>
+          <p>De cortes nobres assados na brasa a pratos cheios de personalidade, tudo é feito para impressionar seu paladar e marcar momentos especiais.</p>
+          <p><strong>Seja para eventos, festas ou encontros com amigos, aqui o sabor é garantido!</strong></p>
+        </div>
+      </section>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="imagens/prato 1.jpg" alt="Prato 1"></div>
+                <div class="swiper-slide"><img src="imagens/churrasco 1.jpg" alt="churrasco 1"></div>
+                <div class="swiper-slide"><img src="imagens/prato 2.jpg" alt="Prato 2"></div>
+                <div class="swiper-slide"><img src="imagens/churrasco 2.jpg" alt="churrasco 2"></div>
+                <div class="swiper-slide"><img src="imagens/prato 3.jpg" alt="Prato 3"></div>
+                <div class="swiper-slide"><img src="imagens/churrasco 3.jpg" alt="churrasco 3"></div>
+                <div class="swiper-slide"><img src="imagens/prato 4.jpg" alt="Prato 4"></div>
+                <div class="swiper-slide"><img src="imagens/churrasco 4.jpg" alt="churrasco 4"></div>
+            </div>
+            <!-- Botões de Navegação (DENTRO do container) -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+ var swiper = new Swiper(".swiper", {
+    slidesPerView: 3,  
+    spaceBetween: 10,   
+    loop: true,         
+    autoplay: {
+        delay: 2000,    
+        disableOnInteraction: false, // Impede que o autoplay pare ao interagir
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 5 },   // Celulares
+        768: { slidesPerView: 2, spaceBetween: 10 },  // Tablets
+        1024: { slidesPerView: 3, spaceBetween: 15 }  // Desktops
+    },
+});
+
+</script>
+
+</body>
+</html>

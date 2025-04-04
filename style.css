@@ -1,0 +1,342 @@
+/* Definição de cores principais */
+:root {
+    --cor-primaria: #ff0000;
+    --cor-secundaria: #FF0000;
+    --cor-fundo: #000000;
+    --cor-texto: #FFFFFF;
+}
+
+/* Reset de margens e espaçamentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    text-align: center;
+}
+
+/* Cabeçalho com banner */
+header {
+    width: 100%;
+    background: var(--cor-secundaria);
+}
+
+.banner {
+    
+        background: url('banner.png') no-repeat center center/cover;
+        width: 100%; /* Ocupar toda a largura */
+        height: 60vh; /* Ocupar toda a altura visível da tela */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(255, 0, 0);
+        padding: 20px;
+    
+}
+
+/* Seção principal (hero) */
+.hero {
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Botões */
+.btn {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--cor-secundaria);
+}
+
+/* Seção de cards */
+.container {
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo dos cards */
+.card {
+    background-color: #222;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* agora sim! */
+    padding: 15px 30px;
+    z-index: 1000;
+}
+
+
+/* Ajustando a logo */
+.logo {
+    height: 60px;
+    margin-right: 30px; /* Espaço entre a logo e o menu */
+}
+
+/* Ajustando o menu */
+nav {
+    flex-grow: 1; /* Faz o menu ocupar o espaço disponível */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espaço entre os itens do menu */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.card {
+    
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 0.8s ease forwards;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .sobre {
+    padding: 80px 20px;
+    background-color: #111; /* Fundo diferente pra destacar */
+    color: var(--cor-texto);
+    text-align: center;
+}
+
+.sobre .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--cor-primaria);
+}
+
+.sobre p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Seção Sobre Nós */
+.sobre {
+    background-color: #111;
+    color: #fff;
+    padding: 100px 20px;
+}
+
+.sobre .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre-imagem img {
+    width: 400px; 
+    border-radius: 10px; 
+}
+
+.sobre-texto {
+    max-width: 50%;
+    text-align: left;
+}
+
+.sobre-texto h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.sobre-texto p strong {
+    color: #ff0000;
+}
+
+.btn {
+    background-color: #ff0000;
+    color: #111;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-imagem img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .sobre-texto {
+        max-width: 90%;
+        text-align: center;
+    }
+}
+/* Seção Churrasco & Gastronomia */
+
+.churrasco-gastronomia h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: var(--cor-primaria);
+}
+.churrasco-gastronomia p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+
+.churrasco {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #111;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .churrasco-gastronomia h2 {
+        font-size: 32px;
+    }
+
+    .churrasco-gastronomia p {
+        font-size: 18px;
+    }
+
+    .container-churrasco {
+        padding: 0 10px;
+    }
+}
+/* Swiper Carrossel */
+.swiper {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.swiper-slide img {
+    width: 200px; /* Tamanho das imagens reduzido */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.swiper-slide img:hover {
+    transform: scale(1.1);
+}
+
+/* Imagem e Texto */
+.churrasco-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.churrasco-info img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.churrasco-texto {
+    max-width: 500px;
+    text-align: left;
+}
+.churrasco-gastronomia {
+    text-align: center;
+    padding: 20px;
+}
+.swiper {
+    max-width: 80%;
+    margin: auto;
+}
+
+
