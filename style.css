@@ -339,4 +339,59 @@ html {
     margin: auto;
 }
 
+.contato {
+    background-color: #111;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .container-contato {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .contato h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: var(--cor-primaria);
+  }
+  
+  .contato p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: #ccc;
+  }
+  
+  .contato-botoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .btn-icone {
+    background-color: #ff5722;
+    color: white;
+    padding: 14px 24px;
+    font-size: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .btn-icone:hover {
+    background-color: #e64a19;
+  }
+  
+  .icone {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+  }
+  
 
